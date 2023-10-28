@@ -2,6 +2,12 @@
   box-sizing: border-box;
 }
 
+:root {
+  --colour1: #5A554E;
+  --colour2: #EBE9E4;
+  --colour3: #8a6961;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -20,4 +26,173 @@ h6 {
 
 p {
   margin: 0;
+}
+
+main section h2 {
+  padding: 20px;
+  width: 20%;
+  text-align: right;
+}
+
+section p,
+#work #whole-grid,
+#contact ul {
+  padding: 20px;
+  width: 80%;
+  border-left: var(--colour1) solid 2px;
+}
+
+header {
+  position: fixed;
+  z-index: 2;
+  width: 100%;
+  height: 80px;
+  background: var(--colour2);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+h1 {
+  padding: 0 10px 0 30px;
+  align-items: center;
+  justify-content: flex-start;
+  background: var(--colour3);
+  color: var(--colour2);
+}
+
+nav {
+  justify-content: flex-end;
+  margin-right: 10px;
+}
+
+nav ul {
+  list-style-type: none;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+nav li {
+  margin: 10px;
+  font-weight: bold;
+  justify-content: center;
+}
+
+nav a {
+  color: var(--colour1);
+  text-decoration: none;
+  font-size: 20px;
+  padding: 10px;
+  transition: all 0.8s ease-out;
+}
+
+nav a:hover {
+  background-color: var(--colour3);
+  color: var(--colour2);
+  cursor: pointer;
+  font-size: 25px;
+}
+
+.hero-banner {
+  height: 30%vh;
+  width: 100%;
+  background-image: url(../images/02-hero-bg.jpg);
+  background-size: cover;
+  background-position: center;
+  padding-top: 150px;
+  padding-left: 0;
+  margin-left: 0;
+}
+
+.hero-banner h2 {
+  color: var(--colour2);
+  text-align: right;
+}
+
+main {
+  width: 95%;
+  margin: 20px;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
+
+main section {
+  margin: 10px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: fit-content;
+}
+
+#whole-grid {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  grid-template-rows: 50% 25% 25%;
+  grid-template-areas: 
+  'pic1 pic1'
+  'pic1 pic1'
+  'pic2 pic3'
+  'pic4 pic5';
+}
+
+#pic1 {
+  grid-area: pic1;
+  background-color: red;
+}
+
+#pic2 {
+  grid-area: pic2;
+  background-color: yellow;
+}
+
+#pic3 {
+  grid-area: pic3;
+  background-color: blue;
+}
+
+#pic4 {
+  grid-area: pic4;
+  background-color: green;
+}
+
+#pic5 {
+  grid-area: pic5;
+  background-color: pink;
+}
+
+.gridpic {
+  margin: 5px;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  align-items: center;
+  display: flex;
+  position: relative;
+}
+
+
+#contact ul {
+  list-style-type: none;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#contact li {
+  margin: 10px;
+}
+
+#contact a {
+  color: var(--colour1);
+  text-decoration: none;
+  font-size: 16px;
+  padding: 5px 0px;
+  transition: all 0.1s ease-in;
+}
+
+#contact a:hover {
+  border-bottom: solid var(--colour1);
+  cursor: pointer;
 }
