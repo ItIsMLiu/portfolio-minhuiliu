@@ -1,11 +1,6 @@
+/* starter code */
 * {
   box-sizing: border-box;
-}
-
-:root {
-  --colour1: #5A554E;
-  --colour2: #EBE9E4;
-  --colour3: #8a6961;
 }
 
 body {
@@ -28,23 +23,17 @@ p {
   margin: 0;
 }
 
-main section h2 {
-  padding: 20px;
-  width: 20%;
-  text-align: right;
+/* general */
+:root {
+  --colour1: #5A554E;
+  --colour2: #EBE9E4;
+  --colour3: #8a6961;
 }
 
-section p,
-#work #whole-grid,
-#contact ul {
-  padding: 20px;
-  width: 80%;
-  border-left: var(--colour1) solid 2px;
-}
-
+/* header bar */
 header {
   position: fixed;
-  z-index: 2;
+  z-index: 3;
   width: 100%;
   height: 80px;
   background: var(--colour2);
@@ -55,28 +44,19 @@ header {
 
 h1 {
   padding: 0 10px 0 30px;
-  align-items: center;
-  justify-content: flex-start;
   background: var(--colour3);
   color: var(--colour2);
 }
 
-nav {
-  justify-content: flex-end;
-  margin-right: 10px;
-}
-
 nav ul {
+  margin-right: 10px;
   list-style-type: none;
   display: flex;
-  justify-content: flex-end;
-  align-items: center;
 }
 
 nav li {
   margin: 10px;
   font-weight: bold;
-  justify-content: center;
 }
 
 nav a {
@@ -88,31 +68,36 @@ nav a {
 }
 
 nav a:hover {
-  background-color: var(--colour3);
+  background: var(--colour3);
   color: var(--colour2);
   cursor: pointer;
   font-size: 25px;
 }
 
+/* hero banner */
 .hero-banner {
-  height: 30%vh;
+  height: 32vh;
   width: 100%;
   background-image: url(../images/02-hero-bg.jpg);
   background-size: cover;
   background-position: center;
   padding-top: 150px;
-  padding-left: 0;
-  margin-left: 0;
 }
 
 .hero-banner h2 {
   color: var(--colour2);
-  text-align: right;
+  background: var(--colour3);
+  position: relative;
+  bottom: -40px;
+  padding: 0px 30px 0px 10px;
+  display: inline-block;
+  float: right;
 }
 
+/* main content - general */
 main {
-  width: 95%;
-  margin: 20px;
+  width: 96%;
+  margin: 30px auto;
   display: flex;
   flex-direction: column;
   align-content: center;
@@ -123,13 +108,29 @@ main section {
   display: flex;
   flex-direction: row;
   align-items: center;
-  height: fit-content;
 }
 
+main section h2 {
+  margin: 20px;
+  width: 20%;
+  text-align: right;
+  color: var(--colour1);
+}
+
+#about p,
+#work #whole-grid,
+#contact ul {
+  padding: 0 20px;
+  width: 70%;
+  border-left: var(--colour1) solid 2px;
+}
+
+/* Work section */ 
 #whole-grid {
+  height: 120vh;
   display: grid;
   grid-template-columns: 50% 50%;
-  grid-template-rows: 50% 25% 25%;
+  grid-template-rows: 25% 25% 25% 25%;
   grid-template-areas: 
   'pic1 pic1'
   'pic1 pic1'
@@ -139,41 +140,78 @@ main section {
 
 #pic1 {
   grid-area: pic1;
-  background-color: red;
 }
 
 #pic2 {
   grid-area: pic2;
-  background-color: yellow;
 }
 
 #pic3 {
   grid-area: pic3;
-  background-color: blue;
 }
 
 #pic4 {
   grid-area: pic4;
-  background-color: green;
 }
 
 #pic5 {
   grid-area: pic5;
-  background-color: pink;
+}
+
+#pic1 .bg-image {
+  background-image: url(../images/1.jpg);
+}
+
+#pic2 .bg-image {
+  background-image: url(../images/2.jpg);
+}
+
+#pic3 .bg-image {
+  background-image: url(../images/3.jpg);
+}
+
+#pic4 .bg-image {
+  background-image: url(../images/4.jpg);
+}
+
+#pic5 .bg-image {
+  background-image: url(../images/5.jpg);
 }
 
 .gridpic {
   margin: 5px;
+}
+
+.bg-image {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  align-items: center;
-  display: flex;
-  position: relative;
+  filter: brightness(50%);
+  height: 100%;
+  border-bottom: solid 5px var(--colour1);
+  transition: all 0.8s ease-out;
 }
 
+.bg-image:hover {
+  cursor: pointer;
+  filter: none;
+}
 
+.headline {
+  padding: 10px;
+  color: var(--colour2);
+  background: var(--colour3);
+  text-align: left;
+  position: relative;
+  bottom: 100px;
+  z-index: 2;
+  display: inline-block;
+}
+
+/* Contact Me section */
 #contact ul {
+  padding-top: 10px;
+  padding-bottom: 10px;
   list-style-type: none;
   display: flex;
   align-items: center;
@@ -181,7 +219,7 @@ main section {
 }
 
 #contact li {
-  margin: 10px;
+  margin: 5px;
 }
 
 #contact a {
@@ -189,7 +227,6 @@ main section {
   text-decoration: none;
   font-size: 16px;
   padding: 5px 0px;
-  transition: all 0.1s ease-in;
 }
 
 #contact a:hover {
