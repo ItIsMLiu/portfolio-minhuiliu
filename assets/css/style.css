@@ -301,7 +301,7 @@ main section h2 {
     'pic5';
   }
 
-  #work h3, #work p {
+  #work h3, #work p, #contact a {
     font-size: 90%;
   }
 }
