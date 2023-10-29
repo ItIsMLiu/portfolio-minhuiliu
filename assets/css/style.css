@@ -90,7 +90,6 @@ nav a:hover {
   position: relative;
   bottom: -40px;
   padding: 0px 30px 0px 10px;
-  display: inline-block;
   float: right;
 }
 
@@ -110,6 +109,7 @@ main section {
   align-items: center;
 }
 
+#photo img,
 main section h2 {
   margin: 20px;
   width: 20%;
@@ -117,12 +117,20 @@ main section h2 {
   color: var(--colour1);
 }
 
+#name,
 #about p,
 #work #whole-grid,
 #contact ul {
   padding: 0 20px;
   width: 70%;
   border-left: var(--colour1) solid 2px;
+}
+
+#name {
+  width: 100px;
+  font-size: xx-large;
+  font-weight: bolder;
+  color: var(--colour1);
 }
 
 /* Work section */ 
@@ -226,6 +234,7 @@ main section h2 {
   color: var(--colour1);
   text-decoration: none;
   font-size: 16px;
+  font-weight: bold;
   padding: 5px 0px;
 }
 
