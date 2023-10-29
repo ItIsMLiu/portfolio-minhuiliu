@@ -64,7 +64,7 @@ nav a {
   text-decoration: none;
   font-size: 20px;
   padding: 10px;
-  transition: all 0.8s ease-out;
+  transition: all 0.5s ease-out;
 }
 
 nav a:hover {
@@ -241,4 +241,67 @@ main section h2 {
 #contact a:hover {
   border-bottom: solid var(--colour1);
   cursor: pointer;
+}
+
+/* media queries */
+@media only screen and (max-width: 1000px) {
+  main section {
+    margin: 10px 5%;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  #name,
+  #about p,
+  #work #whole-grid,
+  #contact ul {
+    padding: 0 20px;
+    width: 90%;
+    border-left: none;
+  }
+
+  main section h2 {
+    text-align: left;
+    width: 80%;
+    border-bottom: var(--colour1) solid 2px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  header {
+    flex-direction: column;
+    align-items: start;
+  }
+
+  h1, nav a, .hero-banner h2 {
+    font-size: 100%;
+  }
+
+  nav li {
+    margin: 0 10px;
+  }
+  
+  nav a {
+    font-size: 16px;
+    padding: 5px;
+  }
+  
+  nav a:hover {
+    font-size: 16px;
+  }
+
+  #whole-grid {
+    grid-template-columns: 100%;
+    grid-template-rows: 2fr 1fr 1fr 1fr 1fr;
+    grid-template-areas: 
+    'pic1'
+    'pic2'
+    'pic3'
+    'pic4' 
+    'pic5';
+  }
+
+  #work h3, #work p {
+    font-size: 90%;
+  }
 }
